@@ -7,9 +7,12 @@
 }
 
 body {
-    background: #c94b4b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(140deg, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(140deg, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #c94b4b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(140deg, #4b134f, #c94b4b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(140deg, #4b134f, #c94b4b);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Roboto Slab', serif;
     color: #333;
     padding: 60px 0;
@@ -25,11 +28,11 @@ main {
     border-radius: 10px;
 }
 
-.container{
+.container {
     padding: 87px 0;
 }
 
-.footer{
+.footer {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -39,13 +42,13 @@ main {
     text-align: center;
 }
 
-.logo{
+.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.covid-icon{
+.covid-icon {
     width: 80px;
 }
 
@@ -63,9 +66,10 @@ p {
 
 a {
     text-decoration: none;
-    color:#ca5556;
+    color: #ca5556;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
@@ -81,8 +85,30 @@ ul{
     color: #ca5556;
     font-weight: 600;
     font-size: 14px;
-    transition: all 0.3s ease;
     position: relative;
+}
+
+.navbar-item a::before,
+.navbar-item a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    transition-duration: 0.5s;
+    background-color: #ca5556;
+}
+
+.navbar-item a::before{
+    left: 50%;
+}
+.navbar-item a::after{
+    right: 50%;
+}
+
+.navbar-item a:hover::before,
+.navbar-item a:hover::after{
+    width: 50%;
 }
 
 /* NEWS */
@@ -111,7 +137,7 @@ ul{
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: all 1s ease;
+    transition: all .5s ease;
 }
 
 .news-item:hover a {
@@ -136,7 +162,7 @@ ul{
     justify-content: center;
 }
 
-.avatar{
+.avatar {
     width: 30%;
 }
 
@@ -158,33 +184,34 @@ ul{
 
 /* CONTACT */
 
-.contact h2{
+.contact h2 {
     text-align: center;
 }
-.contact form{
+
+.contact form {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     margin: 20px auto;
 }
 
-.contact form input{
+.contact form input {
     margin-bottom: 10px;
 }
 
 form input,
-form textarea{
+form textarea {
     font-size: 16px;
     padding: 5px 10px;
     resize: none;
 }
 
 form input:focus,
-form textarea:focus{
+form textarea:focus {
     outline: 2px solid #ca5556;
 }
 
-input[type='submit']{
+input[type='submit'] {
     margin-top: 10px;
     background: #ca5556;
     border: none;
@@ -195,14 +222,14 @@ input[type='submit']{
 
 /* REFERENCES */
 
-.references{
+.references {
     text-align: center;
 }
 
-.references h2{
+.references h2 {
     margin-bottom: 20px;
 }
 
-.references ul li{
+.references ul li {
     margin-bottom: 10px;
 }
